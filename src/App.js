@@ -1,38 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import './Heading'
+function App() {
+  function handleClick() {
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+    console.log(randomNum);
+    let userInput = prompt("type a number");
+    alert(`Computer number ${randomNum}, Your guess: ${userInput}`);
+  }
 
-
-function Header() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <h1>Task: Add a button and handle a click event</h1>
+      <button onClick={handleClick}>Guess the number between 1 and 3</button>
+    </div>
   );
 }
 
-
-function App() {
-  return <Header />
-}
-
 export default App;
-
-
-// return (
-    
-//   <div className="App">
-//     <header className="App-header">
-//       <img src={logo} className="App-logo" alt="logo" />
-//       <p>
-//         Edit <code>src/App.js</code> and save to reload.
-//       </p>
-//       <a
-//         className="App-link"
-//         href="https://reactjs.org"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       >
-//         Learn React
-//       </a>
-//     </header>
-//   </div>
-// );
